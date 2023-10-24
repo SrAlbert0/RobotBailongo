@@ -27,6 +27,8 @@ void loop() {
   centerLegs();
 
   delay(3000);
+
+  meneo();
 }
 
 void centerLegs(){
@@ -34,4 +36,14 @@ void centerLegs(){
   servLL.write(90);
   servRF.write(90);
   servLF.write(90);
+}
+
+void meneo(){
+  int i=0;
+  for(i=0;i<180;i++){
+    servRF.write(i);
+    servLF.write(i);
+    delay(10);
+  }
+
 }
